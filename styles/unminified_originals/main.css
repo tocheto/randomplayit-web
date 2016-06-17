@@ -1,0 +1,66 @@
+html, body { height:100%; }
+html {background-color:black;}/*managed in each theme */
+
+.transparent, .btn , .navigation{
+	background: rgba(76,76,76,0.4);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+}
+.navigation {
+	position:relative;
+	border-radius:100%;
+	float:right;
+	color:silver;
+	text-shadow: 2px 2px 2px black;
+	vertical-align:center;
+	/*manage with @media font-size: 0.6em;*/
+	text-align: center; text-overflow:ellipsis;
+	border-right: thick solid silver; border-left: thick solid silver;
+	
+}
+#stage {
+    background-size:cover;
+	height: 100%; width:100%;
+    overflow: hidden;
+    position: absolute;
+	perspective-origin: 65% 45%;
+	z-index:auto;
+	padding-right:0; padding-left:0;
+}
+.bubble {
+	overflow: hidden;
+	position: absolute;
+	border-radius: 100%;
+	z-index:auto;
+	padding:1%; 
+	opacity: 0;
+	/*color for old browsers*/
+	background-color:silver;
+	/*san - managed by theme -- background: radial-gradient(circle at 20% 0px, rgba(255,255,255,0.7), rgba(255,255,255,0.3) 87%);*/
+}
+.bubble:hover, img:hover{cursor:pointer;}
+span{float:center;font-weight:bold;}
+.navbar-collapse {float:right;}
+/*audio,video {}
+.container{width:auto;}*/
+#picker { width: 200px; height: 200px; float:left; }
+#slide { width: 30px; height: 200px; float:left;}
+
+/*#copyRightMsg {color:white;font-size:9px;  bottom:0; left:5px;z-index:99;} */
+.small_note {font-size:9px;font-weight:bold;}
+.cloudPosibility {width:32px; height:32px;}
+/* ZEN Theme as default - in this page as default,to save bandwidth */
+@media (max-width: 350px) {
+	html {background: url(../img/zen_pb.jpg) no-repeat left bottom fixed;}
+}
+@media (min-width: 351px) {
+  html {background: url(../img/zen_lb2.jpg) no-repeat left bottom fixed;}
+}
+html {
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;	
+}
+.bubble {background: radial-gradient(circle at 20% 0px, rgba(255,255,255,0.7), rgba(255,255,255,0.3) 87%);}
+.navigation {color:white;}		
+/*-------------------------------*/

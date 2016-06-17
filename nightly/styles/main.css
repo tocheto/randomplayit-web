@@ -1,0 +1,176 @@
+html, body { height:100%; }
+html {background:black;}/*managed in each theme */
+
+.transparent, .btn , .navigation{
+	background: rgba(76,76,76,0.4);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+}
+.navigation {
+	position:relative;
+	border-radius:60%;
+	float:right;
+	color:silver;
+	text-shadow: 2px 2px 2px black;
+	vertical-align:center;
+	/*manage with @media font-size: 0.6em;*/
+	text-align: center; text-overflow:ellipsis;
+	border-right: thick solid silver; border-left: thick solid silver;
+	
+}
+#stage {
+    background-size:cover;
+	height: 100%; width:100%;
+    overflow: hidden;
+    position: absolute;
+	perspective-origin: 65% 45%;
+	z-index:auto;
+	padding-right:0; padding-left:0;
+}
+.bubble {
+	overflow: hidden;
+	position: absolute;
+	border-radius: 100%;
+	z-index:auto;
+	padding:1%; 
+	opacity: 0;
+	/*color for old browsers*/
+	background-color:silver;
+	/*san - managed by theme -- background: radial-gradient(circle at 20% 0px, rgba(255,255,255,0.7), rgba(255,255,255,0.3) 87%);*/
+}
+.bubble:hover, img:hover{cursor:pointer;}
+span{float:center;font-weight:bold;}
+.navbar-collapse {float:right;}
+/*audio,video {max-width:50px, max-height:50px;}
+.mejs-controls {position:relative!important}
+mejs-container{width:auto;height:auto;}*/
+/*.container{width:auto;}*/
+
+#play, #pause, #fwd, #rew {
+   width:40px; min-width:40px;
+   height: 40px;min-height:40px;
+   background: rgba(76,76,76,0.4);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+   position: relative;
+   margin-right: 5px;
+   color:silver;
+   /*display: inline-block;*/
+}
+
+#songTitle {color:silver;background: rgba(76,76,76,0.4);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+	margin-left:10px; position:relative; margin-bottom:0;margin-top:0;	
+}
+
+#play:before {
+    width: 0;        
+    height: 0;
+    border-left: 15px solid silver;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; 
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 17px;
+}
+ 
+#pause:before {
+    width: 5px;        
+    height: 24px;
+    background: silver;
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 10px;
+}
+ 
+#pause:after {
+    width: 5px;        
+    height: 24px;
+    background: silver;
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: 14px;
+}
+#fwd:before {
+    width: 0;        	
+    height: 0;
+    border-left: 15px solid silver;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; 
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 8px;
+}
+ 
+#fwd:after {
+    width: 0;        	
+    height: 0;
+    border-left: 15px solid silver;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; 
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 18px;
+}
+ 
+
+
+
+
+#picker { width: 200px; height: 200px; float:left; }
+#slide { width: 30px; height: 200px; float:left;}
+
+/*#copyRightMsg {color:white;font-size:9px;  bottom:0; left:5px;z-index:99;} */
+.small_note {font-size:9px;font-weight:bold;}
+.cloudPosibility {width:32px; height:32px;}
+#searchInput {color:silver; text-align:center;}
+
+
+
+/* ZEN Theme as default - in this page as default,to save bandwidth */
+@media (max-width: 650px) {
+	html.zen  {background: url(../img/zen_portrait.jpg) center   ;background-size:contain; }
+	html.waterfall  {background: url(../img/waterfall_portrait.jpg) center   ;background-size:contain; }
+}
+@media (min-width: 651px) {
+   html.zen  {background: url(../img/zen_bg4.jpg)left top fixed ; background-size:cover;}
+   html.waterfall  {background: url(../img/waterfall.jpg) no-repeat center top fixed ;}
+}
+html.zen  {
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;	
+}
+.zen .bubble {background: radial-gradient(circle at 20% 0px, rgba(255,255,255,0.7), rgba(255,255,255,0.3) 87%);}
+.zen .navigation {color:white;}		
+/*-------------------------------*/
+
+/*Waterfall Theme */
+ html.waterfall {
+	/*background: url(../img/waterfall.jpg) no-repeat center top fixed ;*/
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;	
+}
+/* Adjust each element */
+/*-------------------------------*/
+/*	#stage {}			*/
+	.waterfall #copyRightMsg {color:white;} 	
+/*	footer {} 			*/
+/*	.modal-fade {} 		*/
+/*	.modal-content {} 	*/
+/*	.modal-title {} 	*/
+/*	audio,video {} 		*/
+	.waterfall .bubble {background: radial-gradient(circle at 20% 0px, rgba(255,255,255,0.7), rgba(255,255,255,0.4) 87%);}
+	.waterfall .navigation {color:silver;} .waterfall .navigation:hover {color:white;}		
+/*	.transparent {}		*/	
+/*	.btn {}				*/ .waterfall.btn:hover{background-color:silver;}
+/*-------------------------------*/

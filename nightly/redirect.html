@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+FACILITATES OAuth 1,1a,2 AUTHENTICATION
+To link to this page in HelloJS define the redirect_uri.
+This page is used for authentication as well as POST using the Iframe+form+hash communication hack.
+-->
+<html>
+<head>
+	<title>Thanks you, redirecting...</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<style >
+	html {background: green url(./img/zen_lb.jpg) no-repeat ;background-size:cover;color:white;}
+	</style>
+	
+</head>
+<body>
+	<div class="loading"><span>&bull;</span><span>&bull;</span><span>&bull;</span></div>
+	<h2>Thank you for authorizing our App!</h2>
+	<h3>TheRandomPlayer.com does not store any sensitive information nor keeps a cache of it, 
+		this dialog was only between you and your cloud provider</h3>
+	<h4>We only ask for as little permissions as possible, in this case it is a read-only access to your music files</h4>
+	<h4>Please check our F.A.Q. section for more details</h4>
+	<h6>Please close this window if it does not close automatically in 5 seconds</h6>
+	<button type="button" onclick="closeImmediate();">Close</button>
+	<script>
+		// DEBUG
+		if(window.navigator.userAgent.match(/iPad|iPhone/)&&window.navigator.userAgent.match('Version/8.0')){
+			p("If you are using iOS8 , then please close this window manually because it can't automatically close tabs. ");};
+		function p(str,className){
+			var a = document.createElement('p');
+			if(className){a.className=className;};
+			a.appendChild(document.createTextNode(str));
+			document.body.appendChild(a);};
+		function closeWindow() {setTimeout(function() { window.close();}, 6000);};
+		window.onload = closeWindow();
+		function closeImmediate() {window.close();}
+	</script>
+	<script src="./scripts/hello.mod.js"></script>
+</body>
+</html>

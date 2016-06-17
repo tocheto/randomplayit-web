@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>The Random Player.com! Where is this place?</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+};
+var place = getParameterByName('place');
+var gMapHref = 'https://maps.googleapis.com/maps/api/staticmap?center=Krushunski%20vodopadi,Bulgaria&zoom=12&size=400x200&maptype=terrain&&markers=size:mid%7Ccolor:red%7CKrushunski%20vodopadi,Bulgaria'
+
+</script>
+</head>
+<body>
+	
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">The Random Player - Where is this place?</h4>
+				</div>
+				<div class="modal-body" >
+					<h4>Thank you for your interest </h4> 
+					<span>Here is basic reference about the place shown in the background of the app </span><br />
+					<ul>
+					  <li><a href="https://facebook.com/KrushunaWaterfalls?rf=190568174342078" target="_blank"> Official Facebook page</a></li>
+					  <li><a href="http://krushuna.com" target="_blank"> Tourist inforamtion</a></li>
+					  <li><a href="http://en.wikipedia.org/wiki/Krushuna_Falls" target="_blank"> What Wikipedia says about it</a></li>
+					  <li><a href="http://youtube.com/watch?v=2BI0xPuYzVY" target="_blank"> Check video on Youtube </a></li>
+					  <li><a href="http://www.google.com/search?q=krushuna+falls" target="_blank"> Search Google for more info</a></li>
+					</ul>
+					<!--<img ref="nofollow" id="gMapLink" src='https://maps.googleapis.com/maps/api/staticmap?size=600x400&zoom=7&center=Krushunski%20vodopadi,Bulgaria&maptype=satellite\&markers=size:mid%7Ccolor:red%7CKrushunski%20vodopadi,%20Bulgaria'
+ ></img>-->	
+					<iframe src="https://www.google.com/maps/d/embed?mid=za3n9cDCBo68.kVwKUPtLRAo4" width="400" height="300"></iframe>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Cool</button>
+				</div>
+			
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+		-->
+</body>
+</html>
