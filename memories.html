@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>RandomPlayer - The Cloud and Mobile Music Player </title>
+<link rel="canonical" href="https://playitrandomly.appspot.com/music">
+<meta name="description" content="Try RandomPlayer - the new web app that allows you to listen to your music spread across the major
+cloud storage providers. In additiotn to that, the random player installed application additionaly lets you listen to the music on your phone and on the cloud.
+Enjoy the newest cloud music player out there for free! ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="js/vendor/me/build/mediaelementplayer.min.css" />
+<link rel="stylesheet" href="css/main.css" id="mainCss">
+
+<script async src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+	<!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+		<div class="container">
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<!-- <a class="navbar-brand" href="#">RandomPlayer.com /Music/</a> -->
+				<div>
+				<button type="submit" class="btn btn-primary btn-lg" id="startBtn">Start
+					Randomness</button>
+				</div><br />
+				<div>
+				<!--<p id="copyRightMsg">&copy; TheRandomPlayer.com 2014 -->
+				<!-- san 12/12 - SEO optimisation - moved to top of the page
+				<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com" >&copy; TheRandomPlayer.com 2014 </a>
+				<br />
+				<span>
+					<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com/music" >/ Music</a>
+					<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com/video" >/ Video</a>
+					<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com/memories" >/ Memories</a>
+				</span> -->
+				<!--</p> -->
+				</div>
+				
+				
+				<!-- buttons to display Getting started and FAQ - moved to navbar collapse
+				<div style="float:left;vertical-align:bottom;">
+				<button type="button" class="btn btn-primary btn-sm"
+				data-toggle="modal" data-target="#welcome_modal" href="welcome.html" id="guideBtn">
+				Getting started...</button>
+				<button type="button" class="btn btn-primary btn-sm" href="faq.html" 
+				data-toggle="modal" data-target="#faq"  id="faqBtn">
+				F.A.Q.</button>
+				</div>
+				-->
+				
+			</div>
+			<div class="navbar-collapse collapse">
+
+				<div id="step1" class="navigation">
+					<h5>Add music from The Cloud</h5>
+					<!-- <button id="dropbox" class="possibility" > -->
+					<img src="./img/dropbox-android.png" class="cloudPosibility" id="dropbox" alt="RandomPlay music from Dropbox" rel="nofollow" />
+					<img src="./img/drive_tile-32.png" class="cloudPosibility" id="gdrive" alt="RandomPlay music from Gooogle Drive" rel="nofollow" />
+					<img src="./img/OneDrive_rgb_Blue2728.png" class="cloudPosibility"id="onedrive" alt = "RandomPlay music from Microsoft OneDrive" rel="nofollow"/>
+					<p class = "small_note">* more cloud RandomPlays coming soon</p>
+				</div>
+
+				<div id="step2" class="navigation">
+					<h5>Add local music ...</h5>
+					<a type="submit" class="btn btn-success disabled" id="loadLocalBtn">Load</a>
+					 <p class= "small_note"> *for mobile users</p>
+				</div>
+
+				<div id="step3" class="navigation">
+					<h5>Personalize your player</h5>
+					<a type="button" class="btn btn-primary btn-sm"
+						data-toggle="modal" data-target="#personalise" id="settingsBtn" href="#personalise">Personalize</a>
+					<p class= "small_note"></p>
+				</div>
+				
+				<div id="step4" class="navigation">
+				
+					<h5>General information</h5>
+					
+					<a type="button" class="btn btn-primary btn-xs"
+					data-toggle="modal" data-target="#welcome" href="./welcome.html" id="guideBtn">
+						Welcome</a>
+					<a type="button" class="btn btn-primary btn-xs" href="./faq.html" 
+					data-toggle="modal" data-target="#faq"  id="faqBtn">
+						F.A.Q.</a><br />
+					<a type="button" class="btn btn-primary btn-xs" href="./credits.html" 
+					data-toggle="modal" data-target="#credits"  id="creditsBtn">
+						Credits</a>
+				</div>
+
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</div>
+
+	<div class="container" id="stage">
+		<audio id="mejs" src="./fx/bubble2.wav" controls="controls"></audio><br />
+		<a type="button" class="btn btn-primary btn-sm" href="https://playitrandomly.appspot.com" >&copy; TheRandomPlayer.com 2014 </a><br />
+				<span>
+					<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com/music.html" >/ Music</a>
+					<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com/video.html" >/ Video</a>
+					<a type="button" class="btn btn-primary btn-xs" href="https://playitrandomly.appspot.com/memories.html" >/ Memories</a>
+				</span>
+		<!-- san 12/12 - remove the footer, add copyright under Start randomness
+		<hr>
+		<footer>
+			<p id="copyRightMsg">&copy; TheRandomPlayer.com 2014</p>
+			<a href="./terms.html">terms & conditions</a> -->
+			<!-- Button trigger modal -->
+			<!-- v100 - moved in the navigation collapse
+			<p><button type="button" class="btn btn-primary btn-sm"
+				data-toggle="modal" data-target="#welcome_modal" href="welcome.html" id="guideBtn">
+				Getting started...</button></p>
+			<p><button type="button" class="btn btn-primary btn-sm" href="faq.html" 
+				data-toggle="modal" data-target="#faq"  id="faqBtn">
+				F.A.Q.</button></p>
+			-->
+		<!--</footer> -->
+	</div>
+	<!-- /container -->
+
+
+	<div class="modal fade" id="welcome">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<div class="modal fade" id="faq">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<div class="modal fade" id="credits">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<div class="modal fade " id="personalise">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">RandomPlayer personalisation</h4>
+				</div>
+				<div class="modal-body" >
+					<span>Select a theme - </span>
+						<p>
+						<img src="./img/zen_tmb.jpg" style="width:54;heigth:36px" rel="nofollow" class="settings" id="zen"  alt="zen garden"/>
+						<img src="./img/waterfall_tmb.jpg" style="width:54;heigth:36px" rel="nofollow" class = "settings" id="waterfall" alt="beautifull waterfall" />
+						Stay tuned for more OR...</p>
+						
+						<div class="input-group input-group-sm">
+							<span class="input-group-btn">
+        						<button class="btn btn-default" type="button" id="loadThemeBtn">Load custom CSS file!</button>
+      						</span>
+      						<input type="text" class="form-control" placeholder="coming soon"
+      								id="loadThemeAddr">
+    					</div><!-- /input-group -->
+    				<br />
+					<span>Select color - 
+						
+						<button type="button" class="btn btn-primary btn-sm"  id="dfltClrBtn">Random</button>
+						<button type="button" class="btn btn-primary btn-sm"  id="crntClrBtn">Get current</button>
+					<br /></span>
+					
+					<div style="display:block;">
+							<div id="picker" ></div>
+							<div id="slide" ></div>
+					</div>
+					<br />
+					<div style="display:inline-block;width:100%;">
+					<div style="float:left;margin:0 5px 0 0;">
+							<span >Number of bubbles - </span>
+							<div style="float:right;">
+								<p id="nmbrBbls" style="float:left;" >?</p> 
+								<button type="button" id="plusBblsBtn" style="float:left;">+</button>
+								<button type="button" id="minusBblsBtn" style="float:left;">-</button></div>
+						</div>
+						<div style="float:left;margin:0 5px 0 0;">
+						
+							<span style="float:left;">Font size of a bubble-</span>
+							<div style="float:right;">
+							<p id="fntBbls" style="float:left;">0</p> <p style="float:left;">px</p>
+							<button type="button" id="plusFntBtn"style="float:left;" >+</button>
+							<button type="button" id="minusFntBtn" style="float:left;">-</button></div>
+							</div>
+					
+					</div>
+				
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	
+
+	<!--	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	-->
+	<script src="js/vendor/jquery-1.11.1.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script async type="text/javascript" src="js/hello.all.js"></script>
+	
+	<!--<script type="text/javascript" src="cordova.js"></script> -->
+	
+	<script async src="js/vendor/velocity.min.js"></script>
+	<script async src="js/vendor/textfill.min.js"></script>
+	<script src="js/vendor/me/build/mediaelement-and-player.min.js"></script>
+	<script src="js/core.js"></script>
+	<!--<script src="js/main.js"></script>-->
+	<script async src="js/plugins.js"></script>
+
+	<!-- 
+	<script src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="8860i826pp5l5he"></script>
+	<script src="https://apis.google.com/js/client.js?onload=gdriveInitLoad"></script>
+	<script src="http://js.live.net/v5.0/wl.js"></script>
+	-->
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+		-->
+</body>
+</html>

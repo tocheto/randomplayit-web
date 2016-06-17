@@ -1,0 +1,26 @@
+@media (max-width: 350px) {
+	html {background: url(../img/zen_pb.jpg) no-repeat left bottom fixed;}
+}
+@media (min-width: 351px) {
+  html {background: url(../img/zen_lb2.jpg) no-repeat left bottom fixed;}
+}
+html {
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;	
+}
+/* Adjust each element */
+/*-------------------------------*/
+/*	#stage {}			*/
+/*	#copyRightMsg {} 	*/
+/*	footer {} 			*/
+/*	.modal-fade {} 		*/
+/*	.modal-content {} 	*/
+/*	.modal-title {} 	*/
+/*	audio,video {} 		*/
+	.bubble {background: radial-gradient(circle at 20% 0px, rgba(255,255,255,0.7), rgba(255,255,255,0.3) 87%);}
+	.navigation {color:white;}		
+/*	.transparent {}		*/	
+/*	.btn {}				*/ .btn:hover{background-color:inherit;}
+/*-------------------------------*/
